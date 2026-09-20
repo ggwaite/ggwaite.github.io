@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乡下小处雏女小说合集 - 农村题材原创故事与阅读指南</title>
+    <meta name="description" content="提供高质量的农村题材小说合集，包含乡村生活、乡土人情、纯真故事等原创内容，为读者呈现真实的乡村风貌与情感故事。">
+    <meta name="keywords" content="乡下小处雏女小说合集,农村小说,乡土文学,乡村故事,原创文学">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #4a7c59;
+            --secondary-color: #8d6e63;
+            --bg-color: #f9f7f2;
+            --text-color: #333;
+            --light-text: #666;
+            --card-bg: #fff;
+            --border-radius: 8px;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            background: rgba(255,255,255,0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.9);
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .search-box {
+            background: white;
+            padding: 10px;
+            border-radius: 50px;
+            display: inline-flex;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            outline: none;
+            border-radius: 50px;
+        }
+
+        .search-box button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background-color: #795548;
+        }
+
+        /* Main Content Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        /* Section Styling */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-title a {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            font-weight: normal;
+        }
+
+        /* Novel Grid */
+        .novel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .novel-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .novel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+        }
+
+        .card-cover {
+            height: 280px;
+            background-color: #e0e0e0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 4px 8px;
+            font-size: 0.8rem;
+            border-radius: 4px;
+        }
+
+        .card-info {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            margin-bottom: 15px;
+            flex: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        .btn-read {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            border-radius: 4px;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+
+        .btn-read:hover {
+            background-color: #3d6346;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .rank-list {
+            list-style: none;
+        }
+
+        .rank-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .rank-item:last-child {
+            border-bottom: none;
+        }
+
+        .rank-num {
+            width: 25px;
+            height: 25px;
+            background: #eee;
+            color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 0.9rem;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .rank-item:nth-child(1) .rank-num { background: #ffeb3b; color: #d32f2f; }
+        .rank-item:nth-child(2) .rank-num { background: #ffc107; color: #f57f17; }
+        .rank-item:nth-child(3) .rank-num { background: #ff9800; color: #e65100; }
+
+        .rank-name {
+            flex: 1;
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .category-list {
+            list-style: none;
+        }
+
+        .category-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .category-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+
+        .intro-text h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .intro-text p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #aaa;
+            padding: 40px 0 20px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <div class="logo">
+            <span>乡土</span> 乡间故事汇
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">全部分类</a></li>
+                <li><a href="#">热门榜单</a></li>
+                <li><a href="#">作者专区</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="hero">
+    <div class="container">
+        <h1>乡下小处雏女小说合集</h1>
+        <p>收录大量以农村生活、乡村情感为主题的原创小说，展现淳朴的乡土人情与真实的人性故事。</p>
+        <div class="search-box">
+            <input type="text" placeholder="搜索小说标题、作者或关键词...">
+            <button type="button">搜索</button>
+        </div>
+    </div>
+</div>
+
+<div class="container main-layout">
+    <!-- Main Content -->
+    <main>
+        <section class="intro-section">
+            <div class="intro-text">
+                <h2>关于乡土文学与乡村故事</h2>
+                <p>“乡下小处雏女小说合集”通常指代一类聚焦于农村背景、刻画乡村人物成长与情感历程的文学作品。这类小说往往以细腻的笔触描绘农村的自然风光、风俗习惯以及人物在特定社会环境下的心理变化。</p>
+                <p>阅读此类作品，不仅能让人感受到浓郁的乡土气息，还能引发对人性、亲情、成长以及城乡差异的深刻思考。本站致力于提供最优质的农村题材小说资源，为喜爱乡土文学的读者提供一个纯净的阅读空间。</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">
+                <span>最新收录</span>
+                <a href="#">查看更多 &gt;</a>
+            </div>
+            <div class="novel-grid">
+                <!-- Novel Card 1 -->
+                <article class="novel-card">
+                    <div class="card-cover">
+                        <span class="card-tag">连载中</span>
+                        <img src="https://picsum.photos/seed/novel1/300/400" alt="小说封面">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">青涩的田野</h3>
+                        <p class="card-desc">讲述了在偏远山村长大的少女，面对学业压力与家庭责任时的内心挣扎，以及她在纯真年代里逐渐成熟的感人故事。</p>
+                        <div class="card-footer">
+                            <span>字数：12.5万</span>
+                            <span>更新：昨天</span>
+                        </div>
+                        <a href="#" class="btn-read">立即阅读</a>
+                    </div>
+                </article>
+
+                <!-- Novel Card 2 -->
+                <article class="novel-card">
+                    <div class="card-cover">
+                        <span class="card-tag">完结</span>
+                        <img src="https://picsum.photos/seed/novel2/300/400" alt="小说封面">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">乡间旧事</h3>
+                        <p class="card-desc">通过多个人物视角，还原了一个时代的乡村风貌。从春种秋收到红白喜事，记录了那些被遗忘的岁月与温情。</p>
+                        <div class="card-footer">
+                            <span>字数：8.2万</span>
+                            <span>更新：3天前</span>
+                        </div>
+                        <a href="#" class="btn-read">立即阅读</a>
+                    </div>
+                </article>
+
+                <!-- Novel Card 3 -->
+                <article class="novel-card">
+                    <div class="card-cover">
+                        <span class="card-tag">连载中</span>
+                        <img src="https://picsum.photos/seed/novel3/300/400" alt="小说封面">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">回不去的故乡</h3>
+                        <p class="card-desc">一位城市青年回到农村老家探亲，却发现故土已变。在寻找失落记忆的过程中，他重新审视了人与土地的关系。</p>
+                        <div class="card-footer">
+                            <span>字数：5.6万</span>
+                            <span>更新：1周前</span>
+                        </div>
+                        <a href="#" class="btn-read">立即阅读</a>
+                    </div>
+                </article>
+
+                <!-- Novel Card 4 -->
+                <article class="novel-card">
+                    <div class="card-cover">
+                        <span class="card-tag">完结</span>
+                        <img src="https://picsum.photos/seed/novel4/300/400" alt="小说封面">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">小河边的守望</h3>
+                        <p class="card-desc">描写了一群在河边长大的孩子们，他们的童年游戏、秘密约定以及随着时间流逝而渐行渐远的故事。</p>
+                        <div class="card-footer">
+                            <span>字数：15.0万</span>
+                            <span>更新：2周前</span>
+                        </div>
+                        <a href="#" class="btn-read">立即阅读</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section style="margin-top: 40px;">
+            <div class="section-title">
+                <span>热门分类</span>
+            </div>
+            <div class="novel-grid" style="grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));">
+                <a href="#" class="novel-card" style="padding: 20px; text-align: center; justify-content: center;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">🌾</div>
+                    <span>田园生活</span>
+                </a>
+                <a href="#" class="novel-card" style="padding: 20px; text-align: center; justify-content: center;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">🏡</div>
+                    <span>家庭伦理</span>
+                </a>
+                <a href="#" class="novel-card" style="padding: 20px; text-align: center; justify-content: center;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">🎒</div>
+                    <span>校园回忆</span>
+                </a>
+                <a href="#" class="novel-card" style="padding: 20px; text-align: center; justify-content: center;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">👵</div>
+                    <span>老人故事</span>
+                </a>
+                <a href="#" class="novel-card" style="padding: 20px; text-align: center; justify-content: center;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">🌾</div>
+                    <span>农技科普</span>
+                </a>
+                <a href="#" class="novel-card" style="padding: 20px; text-align: center; justify-content: center;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">🚜</div>
+                    <span>乡村爱情</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Sidebar -->
+    <aside>
+        <div class="sidebar-widget">
+            <h3 style="margin-bottom: 15px; color: var(--text-color);">排行榜</h3>
+            <ul class="rank-list">
+                <li class="rank-item">
+                    <span class="rank-num">1</span>
+                    <span class="rank-name">回不去的故乡</span>
+                </li>
+                <li class="rank-item">
+                    <span class="rank-num">2</span>
+                    <span class="rank-name">青涩的田野</span>
+                </li>
+                <li class="rank-item">
+                    <span class="rank-num">3</span>
+                    <span class="rank-name">乡间旧事</span>
+                </li>
+                <li class="rank-item">
+                    <span class="rank-num">4</span>
+                    <span class="rank-name">小河边的守望</span>
+                </li>
+                <li class="rank-item">
+                    <span class="rank-num">5</span>
+                    <span class="rank-name">老槐树下的秘密</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sidebar-widget">
+            <h3 style="margin-bottom: 15px; color: var(--text-color);">热门标签</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <a href="#" style="background: #f0f0f0; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem;">农村</a>
+                <a href="#" style="background: #f0f0f0; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem;">纯真</a>
+                <a href="#" style="background: #f0f0f0; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem;">成长</a>
+                <a href="#" style="background: #f0f0f0; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem;">回忆</a>
+                <a href="#" style="background: #f0f0f0; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem;">亲情</a>
+                <a href="#" style="background: #f0f0f0; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem;">乡村</a>
+            </div>
+        </div>
+
+        <div class="sidebar-widget">
+            <h3 style="margin-bottom: 15px; color: var(--text-color);">阅读指南</h3>
+            <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">
+                本站所有小说均为用户投稿或原创作品，仅供个人阅读交流。请勿用于商业用途。
+            </p>
+            <p style="font-size: 0.9rem; color: #666;">
+                如有侵权，请联系我们删除。
+            </p>
+        </div>
+    </aside>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="#">关于我们</a>
+            <a href="#">投稿指南</a>
+            <a href="#">免责声明</a>
+            <a href="#">联系客服</a>
+        </div>
+        <div class="copyright">
+            &copy; 2023 乡间故事汇 版权所有.
+        </div>
+    </div>
+</footer>
+
+</body>
+  </html>
