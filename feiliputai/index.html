@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="飞利浦胎压监测系统TPMS官方选购指南，涵盖TPMS类型对比（外置/内置）、安装教程、安全使用注意事项及常见故障排查。提供专业的胎压监测选购建议，保障行车安全。">
+    <meta name="keywords" content="飞利浦胎压监测,TPMS,胎压监测系统,车载胎压监测,轮胎安全">
+    <title>飞利浦胎压监测-TPMS选购指南与安全使用手册</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #004d99;
+            --secondary-color: #e6f0fa;
+            --accent-color: #ff6600;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #f9f9f9;
+            --bg-white: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --border-radius: 8px;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+            font-weight: 400;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #003366 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #e65c00;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 1rem;
+            color: var(--text-main);
+        }
+
+        /* Cards Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .info-card {
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .info-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .info-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .info-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-white);
+            box-shadow: var(--shadow-sm);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .comparison-table th {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Sidebar */
+        aside {
+            background: var(--bg-white);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            height: fit-content;
+        }
+
+        aside h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .check-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--bg-white);
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background-color: var(--bg-white);
+        }
+
+        .faq-question:hover {
+            background-color: #f0f0f0;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--text-light);
+            background-color: #fafafa;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 1rem 1.5rem;
+            max-height: 200px;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 3rem 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">飞利浦 <span>胎压监测</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#guide">选购指南</a></li>
+                    <li><a href="#types">类型对比</a></li>
+                    <li><a href="#install">安装教程</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">☰</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>行车安全，始于胎压</h1>
+                <p>飞利浦TPMS胎压监测系统，实时监控胎压胎温，有效预防爆胎风险。为您提供专业的安装方案与安全使用手册。</p>
+                <a href="#guide" class="cta-button">开始了解</a>
+            </div>
+        </section>
+
+        <div class="container main-layout">
+            <div class="content-area">
+                
+                <!-- 选购指南 -->
+                <section id="guide">
+                    <h2 class="section-title">为什么需要TPMS？</h2>
+                    <article class="info-card">
+                        <h3>预防爆胎，保障生命安全</h3>
+                        <p>据交通部门统计，因轮胎故障引发的交通事故中，约70%是由于胎压不足或过高造成的。飞利浦胎压监测系统能够在行驶过程中实时监测轮胎压力和温度，一旦数值异常，立即发出警报，为驾驶员争取宝贵的反应时间。</p>
+                    </article>
+                    <article class="info-card" style="margin-top: 1rem;">
+                        <h3>延长轮胎寿命，节省燃油</h3>
+                        <p>保持标准的胎压不仅能提高行车稳定性，还能减少轮胎磨损。数据表明，胎压正常可延长轮胎使用寿命20%以上，并有助于降低车辆油耗，实现经济环保驾驶。</p>
+                    </article>
+                </section>
+
+                <!-- 类型对比 -->
+                <section id="types">
+                    <h2 class="section-title">主流TPMS类型对比</h2>
+                    <p style="margin-bottom: 1rem; color: var(--text-light);">目前市面上主流的TPMS主要分为外置式和内置式，不同类型各有优劣，请根据您的车型和安装条件进行选择。</p>
+                    
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>特性</th>
+                                <th>外置式传感器</th>
+                                <th>内置式传感器</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>安装方式</strong></td>
+                                <td>安装在气门嘴上，无需拆卸轮胎</td>
+                                <td>需拆下轮胎，安装在轮毂内</td>
+                            </tr>
+                            <tr>
+                                <td><strong>安装难度</strong></td>
+                                <td>简单，适合DIY</td>
+                                <td>较复杂，需专业工具和技师</td>
+                            </tr>
+                            <tr>
+                                <td><strong>隐蔽性</strong></td>
+                                <td>传感器暴露在车外，可能被人为拆卸</td>
+                                <td>安装在轮毂内，外观整洁隐蔽</td>
+                            </tr>
+                            <tr>
+                                <td><strong>续航与精度</strong></td>
+                                <td>受雨水和泥沙影响，精度稍低</td>
+                                <td>受环境影响小，数据更精准</td>
+                            </tr>
+                            <tr>
+                                <td><strong>适用车型</strong></td>
+                                <td>绝大多数出厂未配备TPMS的车型</td>
+                                <td>出厂自带TPMS的车型（升级改装）</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- 安装与使用 -->
+                <section id="install">
+                    <h2 class="section-title">安装与使用指南</h2>
+                    <div class="card-grid">
+                        <div class="info-card">
+                            <h3>第一步：确认安装位置</h3>
+                            <p>根据车辆说明书，确认四个轮胎的安装位置（左前、右前、左后、右后）。安装后需在仪表盘或接收器上对应位置进行校准，避免显示错误。</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>第二步：电池更换周期</h3>
+                            <p>大多数飞利浦TPMS传感器的电池设计寿命为3-5年。当系统频繁报警或无法连接时，可能是传感器电量耗尽，需联系售后进行更换。</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>第三步：定期检查</h3>
+                            <p>建议每月检查一次胎压，并在长途出行前检查所有轮胎的气压和磨损情况。冬季气温降低会导致胎压下降，需适当补充。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ -->
+                <section id="faq">
+                    <h2 class="section-title">常见问题解答</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            TPMS报警了但胎压看起来正常怎么办？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>首先检查传感器是否安装牢固，气门嘴是否漏气。如果确认安装无误，可能是传感器受到撞击导致数据漂移，建议重启接收器或联系厂家校准。</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            汽车改装了轮毂，原来的胎压监测还能用吗？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>如果是外置式传感器，通常可以直接安装在新的气门嘴上继续使用。如果是内置式传感器，由于安装位置和尺寸变化，通常需要更换适配的传感器或使用外置式方案。</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            安装TPMS后，车检能过吗？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>正规渠道购买的带有CCC认证标志的TPMS产品是合法合规的。外置式传感器通常不会影响年检，但具体规定请参考当地车辆管理所的相关法规。</p>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+
+            <!-- Sidebar -->
+            <aside>
+                <h3>选购注意事项</h3>
+                <ul class="check-list">
+                    <li>查看产品是否具备CCC强制认证标志</li>
+                    <li>确认传感器与车型匹配（如欧标、美标、亚标）</li>
+                    <li>选择带有温度监测功能的产品</li>
+                    <li>了解售后质保服务年限</li>
+                    <li>注意接收器的显示方式（指针、数字、APP）</li>
+                </ul>
+
+                <h3 style="margin-top: 2rem;">相关推荐</h3>
+                <ul class="check-list">
+                    <li>如何判断胎压是否正常？</li>
+                    <li>胎压监测安装误区</li>
+                    <li>轮胎换位与动平衡</li>
+                </ul>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于飞利浦TPMS</h4>
+                    <p>飞利浦致力于为全球用户提供高品质的汽车电子配件。我们的胎压监测产品经过严格测试，旨在为您的每一次出行保驾护航。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#guide">选购指南</a></li>
+                        <li><a href="#types">类型对比</a></li>
+                        <li><a href="#install">安装教程</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>客服热线：400-XXX-XXXX</li>
+                        <li>服务时间：周一至周日 9:00-18:00</li>
+                        <li>电子邮箱：support@example.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 飞利浦胎压监测知识库. All Rights Reserved. 本页面仅为知识科普，非官方网站。
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                const isActive = parent.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(child => {
+                    child.classList.remove('active');
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    parent.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth Scroll for Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
