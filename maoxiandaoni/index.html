@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="冒险岛昵称空格生成器，提供大量免费、好用的冒险岛游戏角色ID空格代码。包含特殊符号、英文空格、中文空格组合，助你打造独一无二的游戏昵称。">
+    <meta name="keywords" content="冒险岛昵称空格, 冒险岛ID生成, 冒险岛角色名, 冒险岛ID空格, 冒险岛名字">
+    <title>冒险岛昵称空格 - 冒险岛角色名生成与排版工具</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6b4c9a;
+            --secondary-color: #ffb347;
+            --bg-color: #fdfbf7;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-sub: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #8e7bbe 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(107, 76, 154, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            padding: 0 20px;
+        }
+
+        .nav-item {
+            padding: 15px 20px;
+            color: var(--text-sub);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+        }
+
+        /* Main Layout */
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Tool Section */
+        .tool-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            min-width: 200px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: var(--primary-color);
+        }
+
+        button.btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        button.btn-primary:hover {
+            background-color: #5a3d82;
+        }
+
+        button.btn-primary:active {
+            transform: scale(0.98);
+        }
+
+        /* Result Area */
+        .result-area {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            min-height: 100px;
+            border: 1px dashed var(--border-color);
+            position: relative;
+        }
+
+        .result-title {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .result-text {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            word-break: break-all;
+            white-space: pre-wrap;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Categories */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 5px solid var(--secondary-color);
+            color: var(--text-main);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 15px;
+        }
+
+        .category-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-color: var(--primary-color);
+        }
+
+        .category-icon {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .category-name {
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--card-bg);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 15px 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: #f9f9f9;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--text-sub);
+            background: #fafafa;
+        }
+
+        .faq-answer.open {
+            padding: 15px 20px;
+            max-height: 200px; /* Approximate max height */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-sub);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .nav-container {
+                flex-wrap: wrap;
+            }
+            
+            .nav-item {
+                flex: 1;
+                text-align: center;
+                font-size: 0.9rem;
+                padding: 12px 5px;
+            }
+
+            .input-group {
+                flex-direction: column;
+            }
+
+            button.btn-primary {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>冒险岛昵称空格</h1>
+        <p>为您提供丰富、安全的冒险岛ID空格生成工具，助您在游戏中脱颖而出。</p>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#generator" class="nav-item active">ID生成器</a>
+            <a href="#categories" class="nav-item">常用符号</a>
+            <a href="#faq" class="nav-item">常见问题</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Generator Tool -->
+        <section id="generator" class="tool-section">
+            <h2 class="section-title">在线生成器</h2>
+            <div class="input-group">
+                <input type="text" id="baseName" placeholder="输入您想要的名字（例如：冒险者）">
+                <button class="btn-primary" onclick="generateName()">生成带空格ID</button>
+            </div>
+            
+            <div class="result-area">
+                <span class="result-title">生成结果：</span>
+                <div id="resultText" class="result-text">点击生成按钮查看结果...</div>
+                <button class="copy-btn" onclick="copyResult()">复制</button>
+            </div>
+            <p style="margin-top: 15px; font-size: 0.85rem; color: #888;">提示：生成的ID包含特殊字符，请确保您的输入法处于英文或全角状态，以免无法复制。</p>
+        </section>
+
+        <!-- Categories -->
+        <section id="categories">
+            <h2 class="section-title">常用分类</h2>
+            <div class="category-grid">
+                <div class="category-card" onclick="fillBase('梦幻')">
+                    <span class="category-icon">✨</span>
+                    <span class="category-name">梦幻系列</span>
+                </div>
+                <div class="category-card" onclick="fillBase('至尊')">
+                    <span class="category-icon">👑</span>
+                    <span class="category-name">至尊系列</span>
+                </div>
+                <div class="category-card" onclick="fillBase('霸气')">
+                    <span class="category-icon">⚔️</span>
+                    <span class="category-name">霸气系列</span>
+                </div>
+                <div class="category-card" onclick="fillBase('可爱')">
+                    <span class="category-icon">🌸</span>
+                    <span class="category-name">可爱系列</span>
+                </div>
+                <div class="category-card" onclick="fillBase('无敌')">
+                    <span class="category-icon">🛡️</span>
+                    <span class="category-name">无敌系列</span>
+                </div>
+                <div class="category-card" onclick="fillBase('传说')">
+                    <span class="category-icon">📜</span>
+                    <span class="category-name">传说系列</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" style="margin-top: 40px;">
+            <h2 class="section-title">常见问题</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    冒险岛昵称空格怎么复制？
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>在电脑端，直接点击“复制”按钮即可。在手机端，建议长按生成的ID文字进行复制，或者使用剪贴板应用。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    为什么生成的名字里有很多乱码？
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>这通常是因为您的输入法处于中文全角状态，导致复制出的空格或符号无法被游戏识别。请确保复制前选中英文模式的字符。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    冒险岛ID长度有限制吗？
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>冒险岛角色的ID长度通常限制在4到12个字符之间。如果生成的名字过长，游戏会自动截断，建议在生成后检查长度。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>本站仅提供游戏ID生成服务，所有游戏内容版权归游戏厂商所有。</p>
+        <p style="margin-top: 10px; opacity: 0.7;">Copyright © 2023 冒险岛昵称空格工具</p>
+    </footer>
+
+    <script>
+        // 生成器逻辑
+        function generateName() {
+            const baseInput = document.getElementById('baseName');
+            let baseName = baseInput.value.trim();
+            
+            if (!baseName) {
+                baseName = '冒险者';
+            }
+
+            // 定义一些常用的空格和分隔符
+            const spaces = [
+                '　', // 中文全角空格
+                ' ',  // 英文半角空格
+                '  ', // 双空格
+                '   ', // 三空格
+                '\u00A0', // 不换行空格
+                ' ' // En空格
+            ];
+            
+            const symbols = [
+                '_', '-', '·', '•'
+            ];
+
+            // 随机选择一个空格
+            const space = spaces[Math.floor(Math.random() * spaces.length)];
+            // 随机选择一个符号
+            const symbol = symbols[Math.floor(Math.random() * symbols.length)];
+
+            // 生成结果：在名字前后添加空格和符号
+            const result = `${symbol}${space}${baseName}${space}${symbol}`;
+            
+            // 显示结果
+            const resultText = document.getElementById('resultText');
+            resultText.innerText = result;
+            
+            // 简单的动画反馈
+            resultText.style.opacity = 0;
+            setTimeout(() => {
+                resultText.style.opacity = 1;
+            }, 100);
+        }
+
+        // 填充预设分类
+        function fillBase(text) {
+            document.getElementById('baseName').value = text;
+            generateName();
+        }
+
+        // 复制功能
+        function copyResult() {
+            const resultText = document.getElementById('resultText');
+            const text = resultText.innerText;
+            
+            if (text === '点击生成按钮查看结果...') {
+                alert('请先生成ID');
+                return;
+            }
+
+            // 使用 Clipboard API
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showToast('复制成功！');
+                }).catch(err => {
+                    fallbackCopy(text);
+                });
+            } else {
+                fallbackCopy(text);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            
+            // 避免滚动到底部
+            textArea.style.top = "0";
+            textArea.style.left = "0";
+            textArea.style.position = "fixed";
+            
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+                document.execCommand('copy');
+                showToast('复制成功！');
+            } catch (err) {
+                showToast('复制失败，请手动复制');
+            }
+            
+            document.body.removeChild(textArea);
+        }
+
+        // 简单的 Toast 提示
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.innerText = message;
+            toast.style.position = 'fixed';
+            toast.style.bottom = '20px';
+            toast.style.left = '50%';
+            toast.style.transform = 'translateX(-50%)';
+            toast.style.background = 'rgba(0,0,0,0.8)';
+            toast.style.color = 'white';
+            toast.style.padding = '10px 20px';
+            toast.style.borderRadius = '20px';
+            toast.style.zIndex = '1000';
+            toast.style.animation = 'fadeInOut 2s ease forwards';
+            
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                document.body.removeChild(toast);
+            }, 2000);
+        }
+
+        // FAQ 切换
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('span');
+            
+            if (answer.classList.contains('open')) {
+                answer.classList.remove('open');
+                icon.innerText = '+';
+                element.style.fontWeight = '600';
+            } else {
+                // 关闭其他
+                document.querySelectorAll('.faq-answer').forEach(item => {
+                    item.classList.remove('open');
+                });
+                document.querySelectorAll('.faq-question span').forEach(item => {
+                    item.innerText = '+';
+                });
+                
+                answer.classList.add('open');
+                icon.innerText = '-';
+                element.style.fontWeight = 'normal';
+            }
+        }
+
+        // 页面加载完成后自动生成一个
+        window.onload = function() {
+            generateName();
+        }
+    </script>
+</body>
+</html>
