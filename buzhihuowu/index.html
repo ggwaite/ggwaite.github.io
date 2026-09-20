@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="不知火舞 - 经典格斗游戏角色资料与游戏攻略。包含不知火舞的技能解析、连招教学、背景故事、历代游戏表现及粉丝社区讨论。">
+    <meta name="keywords" content="不知火舞, 风魔乱舞, 街霸, 格斗游戏, 角色攻略, 技能介绍">
+    <title>不知火舞 - 经典格斗角色资料与游戏攻略</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff4d4d;
+            --secondary-color: #ff9966;
+            --dark-bg: #1a1a1a;
+            --card-bg: #2a2a2a;
+            --text-main: #ffffff;
+            --text-muted: #b0b0b0;
+            --accent-green: #4caf50;
+            --accent-blue: #2196f3;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(26, 26, 26, 0.95);
+            border-bottom: 2px solid var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2b0000 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+            display: block;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #e60000;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 55%;
+            height: 100%;
+            background-image: url('https://picsum.photos/seed/mai/800/900'); /* Generic placeholder for visual structure */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.6;
+            mask-image: linear-gradient(to left, black 40%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to left, black 40%, transparent 100%);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--secondary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Character Profile */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 2px solid var(--secondary-color);
+        }
+
+        .info-list dt {
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+
+        .info-list dd {
+            margin-bottom: 10px;
+            color: var(--text-muted);
+            margin-left: 0;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            border-top: 4px solid var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-name {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .skill-type {
+            font-size: 0.9rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .skill-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Game Guide / Strategy */
+        .guide-container {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 40px;
+        }
+
+        .guide-tabs {
+            display: flex;
+            border-bottom: 1px solid #444;
+            margin-bottom: 30px;
+        }
+
+        .tab-btn {
+            padding: 15px 25px;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .combo-list {
+            counter-reset: combo-counter;
+        }
+
+        .combo-item {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 25px;
+        }
+
+        .combo-item::before {
+            counter-increment: combo-counter;
+            content: counter(combo-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background-color: var(--secondary-color);
+            color: #000;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+        }
+
+        .combo-title {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--text-main);
+        }
+
+        .key-input {
+            display: inline-block;
+            background: #444;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            border: 1px solid #555;
+            margin: 0 2px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            padding: 50px 0 20px;
+            border-top: 1px solid #333;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-image {
+                width: 100%;
+                opacity: 0.3;
+                mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+                -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+            }
+
+            .header-inner {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">不知火<span>舞</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">角色档案</a></li>
+                    <li><a href="#skills">技能图鉴</a></li>
+                    <li><a href="#guide">连招攻略</a></li>
+                    <li><a href="#community">同人社区</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>不知火舞<br><span>超必杀忍蜂</span></h1>
+                    <p>SNK 经典格斗游戏系列中的标志性女性角色。以华丽的忍术、高超的武艺以及标志性的回旋踢著称，是无数玩家心中的格斗女神。</p>
+                    <button class="btn" onclick="document.getElementById('skills').scrollIntoView({behavior: 'smooth'})">查看技能图鉴</button>
+                </div>
+                <div class="hero-image"></div>
+            </div>
+        </section>
+
+        <!-- Character Profile -->
+        <section id="profile">
+            <div class="container">
+                <div class="profile-grid">
+                    <div>
+                        <img src="https://picsum.photos/seed/mai2/600/400" alt="不知火舞角色立绘" class="profile-img">
+                    </div>
+                    <div>
+                        <h2>角色档案</h2>
+                        <p style="margin-bottom: 20px; color: var(--text-muted);">不知火舞，不知火流忍术第十九代宗主，擅长使用扇子和回旋踢。性格开朗直率，为了家族荣誉和正义与邪恶势力斗争。</p>
+                        
+                        <dl class="info-list">
+                            <dt>姓名</dt>
+                            <dd>不知火 舞</dd>
+                            
+                            <dt>所属阵营</dt>
+                            <dd>不知火流 / KOF 参赛者</dd>
+                            
+                            <dt>武器</dt>
+                            <dd>不知火扇、花蝶扇</dd>
+                            
+                            <dt>性格特点</dt>
+                            <dd>热情、正义感强、略带傲娇</dd>
+                            
+                            <dt>经典招式</dt>
+                            <dd>超必杀忍蜂、必杀忍蜂、龙炎舞</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" style="background-color: #151515;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>技能图鉴</h2>
+                    <p style="color: var(--text-muted);">掌握她的核心招式，是成为格斗大师的第一步</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Skill 1 -->
+                    <article class="skill-card">
+                        <div class="skill-name">
+                            <div class="skill-icon">1</div>
+                            必杀忍蜂
+                        </div>
+                        <span class="skill-type">近身 / 突进</span>
+                        <p class="skill-desc">不知火舞向前方进行快速的瞬步突进，同时身体旋转踢出，对前方敌人造成伤害并击飞。这是她近身压制和起手的核心招式。</p>
+                    </article>
+
+                    <!-- Skill 2 -->
+                    <article class="skill-card">
+                        <div class="skill-name">
+                            <div class="skill-icon">2</div>
+                            龙炎舞
+                        </div>
+                        <span class="skill-type">中距离 / 范围</span>
+                        <p class="skill-desc">不知火舞高高跃起，在空中向周围投掷火焰扇子。扇子在空中会散开，对下方的敌人造成多次伤害，是优秀的牵制技。</p>
+                    </article>
+
+                    <!-- Skill 3 -->
+                    <article class="skill-card">
+                        <div class="skill-name">
+                            <div class="skill-icon">3</div>
+                            花蝶扇
+                        </div>
+                        <span class="skill-type">远程 / 控制</span>
+                        <p class="skill-desc">不知火舞向敌人投掷两把扇子，扇子会弹射并在空中旋转。这招主要用于远程消耗，如果敌人命中扇子会被击晕短暂时间。</p>
+                    </article>
+
+                    <!-- Skill 4 -->
+                    <article class="skill-card">
+                        <div class="skill-name">
+                            <div class="skill-icon">4</div>
+                            回旋鹤脚蹴
+                        </div>
+                        <span class="skill-type">下段 / 反击</span>
+                        <p class="skill-desc">不知火舞在空中高速旋转下落，用脚底进行攻击。这是一招优秀的下段招式，可以用来破除敌人的蹲防。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategy Guide -->
+        <section id="guide">
+            <div class="container">
+                <div class="section-title">
+                    <h2>实战连招指南</h2>
+                    <p style="color: var(--text-muted);">针对不同距离和对手状态的最优解</p>
+                </div>
+
+                <div class="guide-container">
+                    <div class="guide-tabs">
+                        <button class="tab-btn active" onclick="openTab(event, 'close')">近身压制</button>
+                        <button class="tab-btn" onclick="openTab(event, 'mid')">中距离牵制</button>
+                        <button class="tab-btn" onclick="openTab(event, 'combo')">终结连段</button>
+                    </div>
+
+                    <div id="close" class="tab-content active">
+                        <div class="combo-list">
+                            <div class="combo-item">
+                                <div class="combo-title">必杀忍蜂 起手连段</div>
+                                <p class="skill-desc">必杀忍蜂命中后，根据对手倒地情况可接后续：</p>
+                                <div style="margin-top: 10px; font-family: monospace; color: var(--secondary-color);">
+                                    必杀忍蜂 → 必杀忍蜂 (空中) → 超必杀忍蜂
+                                </div>
+                            </div>
+                            <div class="combo-item">
+                                <div class="combo-title">近身压制循环</div>
+                                <p class="skill-desc">利用必杀忍蜂和回旋鹤脚蹴保持节奏：</p>
+                                <div style="margin-top: 10px; font-family: monospace; color: var(--secondary-color);">
+                                    必杀忍蜂 → 回旋鹤脚蹴 → 立回
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="mid" class="tab-content">
+                        <div class="combo-list">
+                            <div class="combo-item">
+                                <div class="combo-title">龙炎舞 追击</div>
+                                <p class="skill-desc">龙炎舞命中后，敌人处于浮空状态，可立即跟进：</p>
+                                <div style="margin-top: 10px; font-family: monospace; color: var(--secondary-color);">
+                                    龙炎舞 → 必杀忍蜂 (空中) → 超必杀忍蜂
+                                </div>
+                            </div>
+                            <div class="combo-item">
+                                <div class="combo-title">花蝶扇 控制连</div>
+                                <p class="skill-desc">花蝶扇击晕敌人后，迅速上前连击：</p>
+                                <div style="margin-top: 10px; font-family: monospace; color: var(--secondary-color);">
+                                    花蝶扇 → 必杀忍蜂 → 回旋鹤脚蹴
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="combo" class="tab-content">
+                        <div class="combo-list">
+                            <div class="combo-item">
+                                <div class="combo-title">超必杀终结</div>
+                                <p class="skill-desc">当能量槽满时，使用超必杀忍蜂终结对手：</p>
+                                <div style="margin-top: 10px; font-family: monospace; color: var(--secondary-color);">
+                                    (任意连段) → 超必杀忍蜂
+                                </div>
+                            </div>
+                            <div class="combo-item">
+                                <div class="combo-title">MAX 连段</div>
+                                <p class="skill-desc">蓄力 MAX 能量后的强力终结：</p>
+                                <div style="margin-top: 10px; font-family: monospace; color: var(--secondary-color);">
+                                    龙炎舞 → MAX 必杀忍蜂 → MAX 超必杀忍蜂
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community / FAQ -->
+        <section id="community" style="background-color: #151515;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>玩家常见问题</h2>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <details style="margin-bottom: 15px; background: var(--card-bg); padding: 20px; border-radius: 8px; cursor: pointer;">
+                        <summary style="font-weight: bold; font-size: 1.1rem; color: var(--text-main);">不知火舞在街霸6中表现如何？</summary>
+                        <p style="margin-top: 10px; color: var(--text-muted);">在《街头霸王6》中，不知火舞作为DLC角色加入，凭借其高机动性和强力的下段攻击，在竞技环境中表现活跃，属于T1级别的角色。</p>
+                    </details>
+                    <details style="margin-bottom: 15px; background: var(--card-bg); padding: 20px; border-radius: 8px; cursor: pointer;">
+                        <summary style="font-weight: bold; font-size: 1.1rem; color: var(--text-main);">如何克制不知火舞的远程压制？</summary>
+                        <p style="margin-top: 10px; color: var(--text-muted);">面对她的龙炎舞和花蝶扇，建议保持中距离并利用中段拳脚（如隆的波动拳）进行牵制，或者使用具有霸体能力的角色直接突进近身。</p>
+                    </details>
+                    <details style="margin-bottom: 15px; background: var(--card-bg); padding: 20px; border-radius: 8px; cursor: pointer;">
+                        <summary style="font-weight: bold; font-size: 1.1rem; color: var(--text-main);">不知火舞的必杀忍蜂怎么取消？</summary>
+                        <p style="margin-top: 10px; color: var(--text-muted);">在现代格斗游戏机制中，可以通过输入必杀忍蜂指令后立即反向输入取消指令（如下前下后），或者利用帧数差在对手硬直时取消后续动作。</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>不知火舞资料站</h3>
+                    <p style="color: #666; font-size: 0.9rem;">致力于提供最全面、最准确的格斗游戏角色资料与攻略。由格斗游戏爱好者维护。</p>
+                </div>
+                <div class="footer-col">
+                    <h3>快速导航</h3>
+                    <ul>
+                        <li><a href="#profile">角色档案</a></li>
+                        <li><a href="#skills">技能详解</a></li>
+                        <li><a href="#guide">连招教学</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>相关游戏</h3>
+                    <ul>
+                        <li><a href="#">拳皇系列</a></li>
+                        <li><a href="#">街头霸王6</a></li>
+                        <li><a href="#">饿狼传说</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 不知火舞资料站. All Rights Reserved. 本站为粉丝整理页面，非官方站点。
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            
+            // Hide all tab content
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            
+            // Remove active class from all buttons
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            
+            // Show current tab and add active class
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
