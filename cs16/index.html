@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CS1.6无限血作弊器是一款经典的反恐精英1.6辅助工具，提供无敌模式、无限子弹、透视等强力功能，帮助玩家在局域网或单机模式中轻松获得胜利。本文详细介绍作弊器的使用方法、安全注意事项及常见问题。">
+    <meta name="keywords" content="CS1.6无限血作弊器,CS1.6辅助,CS1.6作弊,反恐精英1.6外挂,CS1.6单机无敌">
+    <title>CS1.6无限血作弊器-强力辅助工具与使用指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: var(--border-radius);
+            font-weight: bold;
+            font-size: 1rem;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content Grid */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+            margin-top: -30px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Content Sections */
+        section {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            color: var(--primary-color);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin: 16px 0 10px;
+            color: var(--primary-color);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+        }
+
+        ul.feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        ul.feature-list li {
+            background: #f9f9f9;
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        /* Code Block */
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.9rem;
+            margin: 15px 0;
+        }
+
+        /* Sidebar */
+        aside .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+
+        aside h3 {
+            margin-top: 0;
+        }
+
+        .download-box {
+            text-align: center;
+            border: 1px dashed #ccc;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .download-btn {
+            display: block;
+            width: 100%;
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .download-btn:hover {
+            background: #34495e;
+        }
+
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 10px;
+            color: var(--text-secondary);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #bdc3c7;
+            padding: 40px 0;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            background: #e8f5e9;
+            color: #2e7d32;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>◆</span> CS1.6辅助中心
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">功能特性</a></li>
+                    <li><a href="#usage">使用教程</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>CS1.6无限血作弊器</h1>
+            <p>专为CS1.6玩家打造的终极辅助工具。支持无敌模式、透视锁定、自动瞄准等核心功能，助你轻松驾驭战场，体验无拘无束的游戏乐趣。</p>
+            <a href="#download" class="cta-button">立即下载最新版</a>
+        </div>
+    </section>
+
+    <div class="container main-layout">
+        <main>
+            <!-- Features Section -->
+            <section id="features">
+                <h2>核心功能介绍</h2>
+                <p>本工具经过深度优化，完美兼容Windows XP至Windows 10系统。内置反检测机制，确保长时间使用稳定不掉线。</p>
+                
+                <h3>1. 无敌模式 (无限血)</h3>
+                <p>开启后，玩家在战斗中受到的所有伤害将立即重置为满血状态。无论是被炸弹炸、被手雷溅射还是被狙击枪爆头，都能瞬间恢复生命值，彻底告别“红血”焦虑。</p>
+                
+                <h3>2. 预瞄透视 (ESP)</h3>
+                <p>开启透视功能，即可在墙壁、烟雾和掩体后看到敌人的准心位置。敌人位置以红色光圈高亮显示，辅助瞄准更加精准。</p>
+                
+                <h3>3. 自动锁定</h3>
+                <p>开启自动瞄准后，当准星靠近敌人时，武器会自动修正弹道指向敌人头部。配合透视使用，爆头率大幅提升。</p>
+
+                <ul class="feature-list">
+                    <li>✅ 免杀技术</li>
+                    <li>✅ 内存级注入</li>
+                    <li>✅ 支持局域网联机</li>
+                    <li>✅ 无需联网验证</li>
+                </ul>
+            </section>
+
+            <!-- Usage Section -->
+            <section id="usage">
+                <h2>详细使用教程</h2>
+                <p>本工具设计简洁，操作门槛低。请按照以下步骤操作即可成功加载：</p>
+                
+                <ol style="margin-left: 20px; color: var(--text-secondary); margin-bottom: 20px;">
+                    <li style="margin-bottom: 10px;">下载并解压文件包。</li>
+                    <li style="margin-bottom: 10px;">启动《反恐精英 1.6》游戏客户端。</li>
+                    <li style="margin-bottom: 10px;">将解压后的 <code>plugin.dll</code> 文件复制到游戏安装目录的 <code>cstrike</code> 文件夹内。</li>
+                    <li style="margin-bottom: 10px;">启动游戏后，按键盘上的 <code>Insert</code> 键呼出控制面板。</li>
+                    <li>在面板中勾选“无限血”选项，即可生效。</li>
+                </ol>
+
+                <h3>控制面板快捷键说明</h3>
+                <pre>
+[Insert] : 打开/关闭控制面板
+[Home]  : 开启/关闭无限血
+[End]   : 开启/关闭透视功能
+[PageUp]: 开启/关闭自动瞄准
+[PageDn]: 切换下一页设置
+[Delete]: 退出程序</pre>
+            </section>
+            
+            <!-- Safety Warning -->
+            <section id="safety" style="border-left: 5px solid #f1c40f;">
+                <h2>⚠️ 安全与注意事项</h2>
+                <p>虽然本工具经过严格测试，但使用外挂始终存在一定风险。请务必注意以下事项：</p>
+                <ul style="color: var(--text-secondary);">
+                    <li style="margin-bottom: 8px;">建议在<strong>单机模式</strong>或<strong>局域网私服</strong>中使用，避免在官方对战平台（如完美世界、Steam）使用导致账号封禁。</li>
+                    <li style="margin-bottom: 8px;">请勿在网吧等公共电脑上长期使用，以免留下文件痕迹。</li>
+                    <li style="margin-bottom: 8px;">下载文件请确保来源可靠，防止捆绑恶意软件。</li>
+                    <li>如果游戏出现闪退，请尝试以管理员身份运行游戏。</li>
+                </ul>
+            </section>
+        </main>
+
+        <aside>
+            <div class="card" id="download">
+                <h3>快速下载</h3>
+                <p>获取最新版本 v3.2.1 (2023更新)</p>
+                <div class="download-box">
+                    <div class="status-badge">当前稳定版</div>
+                    <a href="#" class="download-btn">下载作弊器 (12.5 MB)</a>
+                    <p style="font-size: 0.8rem; margin-top: 10px;">支持 XP / 7 / 10 / 11</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>常见问题 (FAQ)</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">Q: 下载后无法启动游戏？ <span>▼</span></div>
+                    <div class="faq-answer">
+                        A: 请检查是否以管理员身份运行了游戏，或者是否覆盖了游戏原有的插件文件。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">Q: 无限血在爆破模式有效吗？ <span>▼</span></div>
+                    <div class="faq-answer">
+                        A: 有效。本工具直接修改游戏内存数据，不受游戏模式限制。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">Q: 会被VAC封号吗？ <span>▼</span></div>
+                    <div class="faq-answer">
+                        A: 本工具采用内存读写技术，不修改网络数据包，通常不会被VAC系统检测，但在官方服务器仍有一定风险，建议使用私服。
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>更新日志</h3>
+                <ul style="font-size: 0.9rem; color: var(--text-secondary);">
+                    <li style="margin-bottom: 8px;">v3.2.1: 修复了Win10下的兼容性闪退问题。</li>
+                    <li style="margin-bottom: 8px;">v3.2.0: 增加了透视距离调节功能。</li>
+                    <li>v3.1.5: 优化了自动瞄准的灵敏度。</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">免责声明</a>
+                <a href="#">联系管理员</a>
+                <a href="#">隐私政策</a>
+            </div>
+            <p>&copy; 2023 CS1.6辅助中心 版权所有</p>
+            <p style="font-size: 0.8rem; margin-top: 10px; color: #7f8c8d;">本站资源仅供技术交流与学习使用，请勿用于商业用途。请支持正版游戏。</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        function toggleFaq(element) {
+            const parent = element.parentElement;
+            parent.classList.toggle('active');
+            
+            // Toggle arrow icon
+            const icon = element.querySelector('span');
+            if (parent.classList.contains('active')) {
+                icon.textContent = '▲';
+            } else {
+                icon.textContent = '▼';
+            }
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
