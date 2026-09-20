@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对纯白魔法少女-动漫角色设定、剧情解析与同人图鉴</title>
+    <meta name="description" content="绝对纯白魔法少女专题站，提供角色背景故事、变身形态详解、魔法道具图鉴及同人创作展示。深入了解这部作品中的纯白美学与战斗体系。">
+    <meta name="keywords" content="绝对纯白魔法少女,动漫,魔法少女,角色设定,同人图,剧情解析">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #f0f8ff;
+            --accent-color: #e6e6fa;
+            --text-main: #2c3e50;
+            --text-secondary: #5d6d7e;
+            --white: #ffffff;
+            --border-radius: 12px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: var(--primary-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: #a8d8ea;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: #5dade2;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 70% 30%, rgba(168, 216, 234, 0.2) 0%, transparent 60%);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+            letter-spacing: -1px;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--text-main);
+            color: var(--white);
+            border-radius: 30px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background-color: #34495e;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .hero-image {
+            position: relative;
+            height: 400px;
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #a8d8ea;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+        }
+
+        /* Character Grid */
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            height: 300px;
+            background-color: #eee;
+            position: relative;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 10px;
+            background-color: var(--accent-color);
+            color: var(--text-main);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Magic System */
+        .magic-system {
+            background-color: var(--white);
+        }
+
+        .magic-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .magic-visual {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            background: linear-gradient(45deg, #f0f8ff, #e6e6fa);
+            border-radius: var(--border-radius);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .magic-list {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .magic-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .magic-item:last-child {
+            border-bottom: none;
+        }
+
+        .magic-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: #5dade2;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            flex-shrink: 0;
+        }
+
+        .magic-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .magic-info p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .gallery-item {
+            height: 250px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background-color: var(--white);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 10px;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 20px;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-main);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin: 0 auto 30px;
+            }
+
+            .hero-image {
+                height: 300px;
+            }
+
+            .nav-wrapper {
+                position: relative;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>✦</span> 绝对纯白魔法少女
+            </a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#characters">角色图鉴</a></li>
+                    <li><a href="#magic">魔法体系</a></li>
+                    <li><a href="#gallery">同人图鉴</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>纯净与意志的交响曲</h1>
+                    <p>探索“绝对纯白魔法少女”中关于光、希望与牺牲的深刻主题。在这里，我们将深入剖析角色的成长轨迹与独特的魔法设定，还原最纯粹的白魔法世界。</p>
+                    <a href="#characters" class="btn">开始探索</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://picsum.photos/seed/mahou/600/600" alt="绝对纯白魔法少女 主视觉图">
+                </div>
+            </div>
+        </section>
+
+        <!-- Characters Section -->
+        <section id="characters">
+            <div class="container">
+                <div class="section-header">
+                    <h2>核心角色图鉴</h2>
+                    <p>每位魔法少女都代表着一种独特的白色信仰与力量源泉</p>
+                </div>
+                <div class="character-grid">
+                    <!-- Character 1 -->
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/white1/400/500" alt="雪乃">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">雪乃 · 纯白之冠</h3>
+                            <p class="card-desc">主角，拥有操控冰雪与净化光线的天赋。性格冷静沉稳，为了守护重要的人不惜燃烧生命。</p>
+                            <span class="tag">净化系</span>
+                            <span class="tag">高阶</span>
+                        </div>
+                    </article>
+                    <!-- Character 2 -->
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/white2/400/500" alt="莉莉丝">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">莉莉丝 · 梦幻织者</h3>
+                            <p class="card-desc">擅长编织精神结界与幻术。虽然看似柔弱，但意志力惊人，是团队中不可或缺的战术核心。</p>
+                            <span class="tag">幻术系</span>
+                            <span class="tag">辅助</span>
+                        </div>
+                    </article>
+                    <!-- Character 3 -->
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/white3/400/500" alt="奥罗拉">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">奥罗拉 · 晨曦之锋</h3>
+                            <p class="card-desc">身手敏捷的近战型魔法少女，使用光之长剑。性格直率热血，是队伍的先锋。</p>
+                            <span class="tag">剑术系</span>
+                            <span class="tag">突击</span>
+                        </div>
+                    </article>
+                    <!-- Character 4 -->
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/white4/400/500" alt="静音">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">静音 · 契约守护者</h3>
+                            <p class="card-desc">负责管理契约与封印的古老魔法少女。沉默寡言，只相信契约的力量。</p>
+                            <span class="tag">封印系</span>
+                            <span class="tag">守卫</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Magic System Section -->
+        <section id="magic" class="magic-system">
+            <div class="container">
+                <div class="section-header">
+                    <h2>白魔法体系解析</h2>
+                    <p>不同于传统的破坏性魔法，本作中的“绝对纯白”强调的是治愈、净化与秩序</p>
+                </div>
+                <div class="magic-container">
+                    <div class="magic-visual">
+                        <img src="https://picsum.photos/seed/sparkle/600/600" alt="魔法特效示意" style="opacity: 0.8; border-radius: 20px;">
+                    </div>
+                    <div class="magic-list">
+                        <div class="magic-item">
+                            <div class="magic-icon">❄️</div>
+                            <div class="magic-info">
+                                <h3>极寒净化</h3>
+                                <p>通过冻结负面情绪与污秽，将其转化为纯净的能量。这是雪乃的核心技能，能够瞬间净化大范围的黑暗领域。</p>
+                            </div>
+                        </div>
+                        <div class="magic-item">
+                            <div class="magic-icon">✨</div>
+                            <div class="magic-info">
+                                <h3>光辉领域</h3>
+                                <p>制造一个只有光明存在的绝对领域，在此领域内，魔法少女的体力与魔力消耗减半，且无法被黑暗生物攻击。</p>
+                            </div>
+                        </div>
+                        <div class="magic-item">
+                            <div class="magic-icon">🤝</div>
+                            <div class="magic-info">
+                                <h3>契约共鸣</h3>
+                                <p>魔法少女之间建立心灵链接，共享生命值。当一人受到重创时，其他人可以转移部分生命力进行救援。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h2>同人创作图鉴</h2>
+                    <p>来自全球画师的“绝对纯白魔法少女”同人画作展示</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/art1/400/300" alt="同人画作1">
+                        <div class="gallery-overlay">雪乃的清晨</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/art2/400/300" alt="同人画作2">
+                        <div class="gallery-overlay">四人小队集结</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/art3/400/300" alt="同人画作3">
+                        <div class="gallery-overlay">秘密花园</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/art4/400/300" alt="同人画作4">
+                        <div class="gallery-overlay">战斗姿态</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/art5/400/300" alt="同人画作5">
+                        <div class="gallery-overlay">幕后花絮</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/art6/400/300" alt="同人画作6">
+                        <div class="gallery-overlay">日常时刻</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/art7/400/300" alt="同人画作7">
+                        <div class="gallery-overlay">契约书</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/art8/400/300" alt="同人画作8">
+                        <div class="gallery-overlay">特别篇概念</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                    <p>关于魔法少女设定与观看/阅读指南</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>魔法少女的变身器是什么样子的？</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>在本作设定中，变身器并非传统的法杖或魔镜，而是“结晶化的情感”。当魔法少女在关键时刻产生强烈的信念时，结晶会自动形成，化作纯白色的战衣与武器。例如，雪乃的武器是“霜冻之泪”，是一把由冰晶凝聚而成的长剑。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>“绝对纯白”的设定有什么特殊含义？</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>“绝对纯白”并非指颜色单调，而是指“不掺杂质的意志”。在黑暗的世界观中，这种颜色象征着无法被污染的初心和绝对的正义。它代表了魔法少女们在无数次战斗中，依然保持内心纯净的能力。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>同人创作有哪些注意事项？</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>同人作品应当尊重原作角色的核心性格与世界观逻辑。在描绘战斗场景时，建议侧重于“光与影的对比”以及“治愈与牺牲”的主题，避免过度暴力或血腥的描写，以符合“白魔法”的基调。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于本站</h4>
+                    <p style="color: #bdc3c7; font-size: 0.9rem;">
+                        本站为“绝对纯白魔法少女”的粉丝同人展示与资讯聚合平台，致力于还原作品中的美学设定与剧情细节。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#home">回到首页</a></li>
+                        <li><a href="#characters">角色列表</a></li>
+                        <li><a href="#magic">魔法图鉴</a></li>
+                        <li><a href="#gallery">同人投稿</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="#">官方设定集</a></li>
+                        <li><a href="#">声优访谈</a></li>
+                        <li><a href="#">周边商城</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 绝对纯白魔法少女专题站. All Rights Reserved. 
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navList = document.getElementById('nav-list');
+            navList.classList.toggle('show');
+        }
+
+        // FAQ Accordion
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Close all items
+            document.querySelectorAll('.faq-item').forEach(i => {
+                i.classList.remove('active');
+            });
+
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('nav-list').classList.remove('show');
+                }
+            });
+        });
+
+        // Active Link Highlight on Scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('nav ul li a').forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href').includes(current)) {
+                    a.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+  </html>
